@@ -12,8 +12,8 @@ jobs:
   firstjob:
     name: myfirstjob
     runs-on: ubuntu-latest
-    environment:
-      name: production_environment
+    # environment:
+    #   name: production_environment
     steps: 
     -  name: Azure Login
        uses: Azure/login@v2.3.0
