@@ -5,6 +5,9 @@ on:
     - master
     - release/
 
+permissions:
+  id-token: write
+  contents: read
 jobs: 
   firstjob:
     name: myfirstjob
