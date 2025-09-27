@@ -46,6 +46,7 @@ jobs:
   second-job:
     runs-on: ubuntu-latest
     name: apply
+    needs: firstjob
 
     steps:
     -  name: terraformInit
