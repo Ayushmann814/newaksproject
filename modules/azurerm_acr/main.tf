@@ -1,5 +1,5 @@
 resource "azurerm_container_registry" "acr" {
-  name                = "containerRegistry1"
+  name                = "ayushcontainerregistry1879"
   resource_group_name = var.resource_group_name
   location            = var.location
   sku                 = "Premium"
