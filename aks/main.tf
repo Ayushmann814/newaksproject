@@ -1,5 +1,6 @@
 module "aks" {
   source = "../modules/azurerm_aks"
+  depends_on = [ resource_group.module ]
  
   aks_name            = "myAKSCluster"
   location            = var.location
@@ -8,7 +9,7 @@ module "aks" {
 
 module "acr" {
   source = "../modules/azurerm_acr"
- 
+  depends_on = [ resource_group.module ]
   location            = var.location
   resource_group_name = var.resource_group_name
 }
