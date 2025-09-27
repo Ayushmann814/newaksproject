@@ -49,6 +49,9 @@ jobs:
     needs: firstjob
 
     steps:
+    -  name: Checkout
+       uses: actions/checkout@v5.0.0
+       
     -  name: terraformInit
        id: init
        run: terraform init -input=false
