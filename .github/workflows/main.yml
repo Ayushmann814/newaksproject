@@ -59,6 +59,12 @@ jobs:
          
     -  name: Checkout
        uses: actions/checkout@v5.0.0
+    -  name: Setup Terraform
+
+    
+       uses: hashicorp/setup-terraform@v3
+       with:
+         terraform_version: 1.7.5
        
     -  name: terraformInit
        id: init
