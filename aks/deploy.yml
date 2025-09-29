@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+  labels:
+    app: my-app
+    env: dev
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1    
+  template:
+    metadata:
+      name: my-pod
+      labels:
+        app: my-app
+        env: dev
+    spec:
+      containers:
+      - name: my-container
+        image: sonambewafaa/hellotondu:latest
+        ports:
+        -  containerPort: 80

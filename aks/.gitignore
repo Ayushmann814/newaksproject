@@ -12,3 +12,6 @@ override.tf.json
 .terraform.d/
 .terragrunt.hcl
 .terragrunt-debug.log
+
+argocd-windows-amd64.exe
+deploy.txt
