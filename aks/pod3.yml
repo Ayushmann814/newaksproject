@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mynewapp
+  namespace: default
+  labels:
+    app.kubernetes.io/name: mynewapp
+spec:
+  containers:
+  - name: mynewapp
+    image: ayush814/mynginx
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
