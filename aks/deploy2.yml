@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: ayush814/mynginx
+        image: ayush814/mynginx:v1
         resources:
           limits:
             memory: "128Mi"
